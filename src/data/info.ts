@@ -151,6 +151,13 @@ export const info = {
 
   projects: [
     {
+      title: "Budget App - Web Application",
+      isFeatured: true,
+      thumbnail: "/dist/assets/images/budgetapp.png",
+      githubUrl: "https://github.com/niangamadou888/Budget-app",
+      liveUrl: "https://budget-app-niangamadou888.netlify.app/",
+    },
+    {
       title: "Sudoku Solver - Web Application",
       isFeatured: true,
       thumbnail: "/assets/images/sudoku-solver.png",
@@ -168,6 +175,7 @@ export const info = {
       isFeatured: true,
       thumbnail: "/assets/images/translator.png",
       githubUrl: "#",
-    },
+    }
   ],
 };
+
