@@ -153,9 +153,16 @@ export const info = {
     {
       title: "Budget App - Web Application",
       isFeatured: true,
-      thumbnail: "/assets/images/budgetapp.png",
+      thumbnail: "/dist/assets/images/budgetapp.png",
       githubUrl: "https://github.com/niangamadou888/Budget-app",
       liveUrl: "https://budget-app-niangamadou888.netlify.app/",
+    },
+    {
+      title: "Real Time Multiplayer Game - Web Application",
+      isFeatured: true,
+      thumbnail: "/assets/images/real-time-multiplayer-game.png",
+      githubUrl: "https://github.com/niangamadou888/Real-Time-Multiplayer-Game",
+      liveUrl: "https://real-time-multiplayer-game.niangamadou888.repl.co/",
     },
     {
       title: "Sudoku Solver - Web Application",
@@ -172,7 +179,7 @@ export const info = {
     },
     {
       title: "American / British translator - Web Application",
-      isFeatured: true,
+      isFeatured: false,
       thumbnail: "/assets/images/translator.png",
       githubUrl: "#",
     }
