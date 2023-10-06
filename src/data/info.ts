@@ -153,7 +153,7 @@ export const info = {
     {
       title: "Budget App - Web Application",
       isFeatured: true,
-      thumbnail: "/dist/assets/images/budgetapp.png",
+      thumbnail: "/assets/images/budgetapp.png",
       githubUrl: "https://github.com/niangamadou888/Budget-app",
       liveUrl: "https://budget-app-niangamadou888.netlify.app/",
     },
