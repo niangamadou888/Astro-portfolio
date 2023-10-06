@@ -25,7 +25,7 @@ Inside of your Astro project, you'll see the following folders and files:
 │   |   |── Layout.astro
 │   |   └── ...
 │   ├── pages/
-│   |   ├── peojects.astroniangamadou888
+│   |   ├── projects.astro
 │   |   ├── index.astro
 │   ├── styles/
 │   |   |── custom-styles.css
