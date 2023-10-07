@@ -174,7 +174,7 @@ export const info = {
       title: "To Do List - Web Application",
       isFeatured: true,
       thumbnail: "/assets/images/todolist.png",
-      githubUrl: "https://github.com/niangamadou888/to-do-list-javascript",
+      githubUrl: "https://github.com/niangamadou888/Todo-list",
       liveUrl: "https://to-do-listabn.netlify.app/"
     },
     {
