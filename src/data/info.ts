@@ -178,6 +178,13 @@ export const info = {
       liveUrl: "https://to-do-listabn.netlify.app/"
     },
     {
+      title: "Snake Game - Web Application",
+      isFeatured: false,
+      thumbnail: "/assets/images/Snake_Game.png",
+      githubUrl: "https://github.com/niangamadou888/Snake-game",
+      liveUrl: "https://snake-game8.netlify.app/",
+    },
+    {
       title: "American / British translator - Web Application",
       isFeatured: false,
       thumbnail: "/assets/images/translator.png",
