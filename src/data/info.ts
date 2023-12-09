@@ -171,8 +171,15 @@ export const info = {
       githubUrl: "https://github.com/niangamadou888/boilerplate-project-sudoku-solver",
     },
     {
-      title: "To Do List - Web Application",
+      title: "Mini Social Network - Web Application",
       isFeatured: true,
+      thumbnail: "/assets/images/mini-social-network.png",
+      githubUrl: "https://github.com/niangamadou888/Mini-Social-Network",
+      liveUrl: "https://mini-social-network.netlify.app/"
+    },
+    {
+      title: "To Do List - Web Application",
+      isFeatured: false,
       thumbnail: "/assets/images/todolist.png",
       githubUrl: "https://github.com/niangamadou888/Todo-list",
       liveUrl: "https://to-do-listabn.netlify.app/"
