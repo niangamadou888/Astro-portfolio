@@ -23,24 +23,26 @@ export const info = {
 
   experience: [
     {
-      name: "Internship at Hatice Technologie",
-      location: "Dakar, Sénégal",
-      startDate: "March 2022",
-      endDate: "May 2022",
-      description: [
-        "✓ Creation of a Tic Tac Toe game and a Sokoban game on Android mobile.",
-      ],
-    },
-
-    {
       name: "Internship at SAED",
       location: "Saint-Louis, Sénégal",
       startDate: "March 2023",
       endDate: "May 2023",
       description: [
-        "✓ Network Administrator",
+        "✓ Take charge of hardware installation operations, including connecting equipment to the network, making connections and configuring software.",
+        "✓ Incident and problem management for computer systems and networks, and reporting.",
+        "✓ Installation and configuration of new IT equipment, and assistance with user training.",
       ],
     },
+    
+    {
+      name: "Internship at Hatice Technologie",
+      location: "Dakar, Sénégal",
+      startDate: "March 2022",
+      endDate: "May 2022",
+      description: [
+        "✓ Design and programming of mobile games and software solutions according to specifications.",
+      ],
+    }
   ],
 
   education: [
@@ -48,7 +50,7 @@ export const info = {
       name: "Cheikh Hamidou Kane Digital University(Ex UVS)",
       location: "Saint-Louis, Sénégal",
       startDate: "2019",
-      endDate: "Present",
+      endDate: "2023",
       description: [
         "bachelor's degree in computer science and application development (web, mobile, gaming)",
       ],
