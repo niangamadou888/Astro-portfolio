@@ -70,6 +70,7 @@ export const info = {
     github: "https://github.com/niangamadou888",
     email: "amadouniang2001@gmail.com",
     linkedin: "https://www.linkedin.com/in/amadou-boubacar-niang-09b973160/",
+    instagram: "https://www.instagram.com/niangamadou888/"
   },
 
   certifications: [
@@ -103,6 +104,15 @@ export const info = {
     },
     {
       name: "React"
+    },
+    {
+      name: "Angular"
+    },
+    {
+      name: "Java"
+    },
+    {
+      name: "SpringBoot"
     },
     {
       name: "Golang"
