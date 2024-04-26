@@ -171,14 +171,14 @@ export const info = {
     },
     {
       title: "Real Time Multiplayer Game - Web Application",
-      isFeatured: true,
+      isFeatured: false,
       thumbnail: "/assets/images/real-time-multiplayer-game.png",
       githubUrl: "https://github.com/niangamadou888/Real-Time-Multiplayer-Game",
       liveUrl: "https://real-time-multiplayer-game.niangamadou888.repl.co/",
     },
     {
       title: "Sudoku Solver - Web Application",
-      isFeatured: true,
+      isFeatured: false,
       thumbnail: "/assets/images/sudoku-solver.png",
       githubUrl: "https://github.com/niangamadou888/boilerplate-project-sudoku-solver",
     },
@@ -208,6 +208,18 @@ export const info = {
       isFeatured: false,
       thumbnail: "/assets/images/translator.png",
       githubUrl: "#",
+    },
+    {
+      title: "School Management - Web Application",
+      isFeatured: true,
+      thumbnail: "/assets/images/SchoolManagement.png",
+      githubUrl: "https://github.com/niangamadou888/school-management",
+    },
+    {
+      title: "City Life - Web Application",
+      isFeatured: true,
+      thumbnail: "/assets/images/CityLife.png",
+      githubUrl: "https://github.com/niangamadou888/City-Life",
     }
   ],
 };
