@@ -69,12 +69,12 @@ export const Projects = () => {
 
   const webProjects: Project[] = [
     {
-      title: "The Useless Button",
-      description: "The Whimsy Website Rotator is a modern web application that provides an elegant and interactive way to showcase multiple websites in a rotating carousel format. Built with performance and user experience in mind, it allows seamless transitions between different website previews while maintaining a smooth and responsive interface.",
-      image: "/useless.png",
-      tags: ["React", "TypeScript", "Tailwind CSS", "Vite", "shadcn/ui"],
-      liveUrl: "https://takemeuselesswebsite.vercel.app/",
-      githubUrl: "https://github.com/ytlab23/whimsy-website-rotator"
+      title: "Ytchap",
+      description: "YTChap is an exclusive online platform that improves navigation and viewing capabilities of videos, especially those on sites like YouTube. Creators can divide their videos into chapters using this tool, thereby granting viewers relatively easier access to particular areas of the content based on their preferences.",
+      image: "/ytchap.png",
+      tags: ["Next js", "Javascropt", "Google Gemini", "Nodejs", "Tailwind CSS"],
+      liveUrl: "https://ytchap.com/",
+      githubUrl: "https://github.com/niangamadou888/ytchap"
     },
     {
       title: "Free AI Detector",
