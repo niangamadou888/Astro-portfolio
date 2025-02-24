@@ -1,24 +1,52 @@
-import { motion } from "framer-motion";
-import { GithubIcon, LinkedinIcon, MailIcon, FileDown } from "lucide-react";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { GithubIcon, LinkedinIcon, MailIcon, FileDown, Sparkles } from "lucide-react";
 import { Button } from "./ui/button";
 import { toast } from "./ui/use-toast";
+import { useEffect, useRef, useState } from "react";
 
 const container = {
   hidden: { opacity: 0 },
   show: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.2
+      staggerChildren: 0.2,
+      delayChildren: 0.3
     }
   }
 };
 
 const item = {
-  hidden: { opacity: 0, y: 20 },
-  show: { opacity: 1, y: 0 }
+  hidden: { opacity: 0, y: 30, scale: 0.9 },
+  show: { 
+    opacity: 1, 
+    y: 0, 
+    scale: 1,
+    transition: {
+      type: "spring",
+      stiffness: 100,
+      damping: 10
+    }
+  }
+};
+
+const glowAnimation = {
+  initial: { opacity: 0.5, scale: 0.8 },
+  animate: {
+    opacity: [0.5, 1, 0.5],
+    scale: [0.8, 1.2, 0.8],
+    transition: {
+      duration: 3,
+      repeat: Infinity,
+      ease: "easeInOut"
+    }
+  }
 };
 
 export const Hero = () => {
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const heroRef = useRef<HTMLElement>(null);
+  const { scrollY } = useScroll();
+  const y = useTransform(scrollY, [0, 500], [0, -150]);
   const handleDownload = (language: 'en' | 'fr') => {
     const pdfUrl = language === 'en' ? '/Amadou Boubacar Niang cv anglais.pdf' : '/CV de Amadou Boubacar Niang.pdf';
     window.open(pdfUrl, '_blank');
@@ -30,35 +58,56 @@ export const Hero = () => {
   };
 
   return (
-    <section className="min-h-screen flex flex-col justify-center items-center text-center p-4 relative overflow-hidden">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background to-background/50 pointer-events-none" />
+    <section ref={heroRef} className="min-h-screen flex flex-col justify-center items-center text-center p-4 relative overflow-hidden">
+      {/* Futuristic grid background */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none" />
       
-      {/* Animated background shapes */}
+      {/* Dynamic background gradients */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
           animate={{
             scale: [1, 1.2, 1],
             rotate: [0, 90, 0],
+            x: [-20, 20, -20],
+            y: [-20, 20, -20]
           }}
           transition={{
             duration: 20,
             repeat: Infinity,
             ease: "linear"
           }}
-          className="absolute -top-1/2 -left-1/2 w-full h-full bg-gradient-to-br from-primary/20 to-transparent rounded-full blur-3xl"
+          style={{ y }}
+          className="absolute -top-1/2 -left-1/2 w-full h-full bg-gradient-to-br from-primary/30 via-purple-500/20 to-transparent rounded-full blur-3xl dark:from-primary/20 dark:via-purple-500/10"
         />
         <motion.div
           animate={{
             scale: [1.2, 1, 1.2],
             rotate: [90, 0, 90],
+            x: [20, -20, 20],
+            y: [20, -20, 20]
           }}
           transition={{
-            duration: 20,
+            duration: 25,
             repeat: Infinity,
             ease: "linear"
           }}
-          className="absolute -bottom-1/2 -right-1/2 w-full h-full bg-gradient-to-tl from-purple-500/20 to-transparent rounded-full blur-3xl"
+          style={{ y }}
+          className="absolute -bottom-1/2 -right-1/2 w-full h-full bg-gradient-to-tl from-purple-500/30 via-primary/20 to-transparent rounded-full blur-3xl dark:from-purple-500/20 dark:via-primary/10"
+        />
+
+        {/* Floating particles */}
+        <motion.div
+          variants={glowAnimation}
+          initial="initial"
+          animate="animate"
+          className="absolute top-1/4 left-1/4 w-2 h-2 bg-primary rounded-full"
+        />
+        <motion.div
+          variants={glowAnimation}
+          initial="initial"
+          animate="animate"
+          transition={{ delay: 1 }}
+          className="absolute bottom-1/4 right-1/4 w-2 h-2 bg-purple-500 rounded-full"
         />
       </div>
 
@@ -69,13 +118,25 @@ export const Hero = () => {
         className="space-y-6 relative z-10"
       >
         <motion.div variants={item}>
-          <h1 className="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary via-purple-400 to-primary animate-gradient">
+          <h1 className="text-4xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary via-purple-400 to-primary animate-gradient relative inline-block group">
+            <motion.span
+              className="absolute -inset-1 rounded-xl bg-gradient-to-r from-primary/20 to-purple-500/20 blur-xl group-hover:blur-2xl transition-all duration-500 opacity-70 group-hover:opacity-100"
+              animate={{
+                opacity: [0.5, 0.8, 0.5],
+              }}
+              transition={{
+                duration: 3,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+            />
             Hello, I'm Amadou Boubacar Niang
           </h1>
         </motion.div>
 
         <motion.div variants={item}>
-          <p className="text-xl md:text-2xl font-medium bg-clip-text text-transparent bg-gradient-to-r from-muted-foreground to-muted-foreground/80">
+          <p className="text-xl md:text-2xl font-medium text-muted-foreground/90 dark:text-muted-foreground/80 relative inline-flex items-center gap-2">
+            <Sparkles className="w-5 h-5 text-primary animate-pulse" />
             Software Developer (Web, Mobile, Gaming...)
           </p>
         </motion.div>
@@ -94,7 +155,7 @@ export const Hero = () => {
           <Button 
             variant="default" 
             onClick={() => handleDownload('en')}
-            className="w-full sm:w-auto bg-gradient-to-r from-primary to-purple-600 hover:from-primary/90 hover:to-purple-600/90 transition-all duration-300"
+            className="w-full sm:w-auto bg-gradient-to-r from-primary to-purple-600 hover:from-primary/90 hover:to-purple-600/90 transition-all duration-300 shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 dark:shadow-primary/10 dark:hover:shadow-primary/20"
           >
             <FileDown className="mr-2" />
             Download Resume (EN)
