@@ -58,33 +58,18 @@ export const Hero = () => {
   };
 
   return (
-    <section ref={heroRef} className="min-h-screen flex flex-col justify-center items-center text-center p-4 relative overflow-hidden">
-      {/* Futuristic grid background */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none" />
+    <section ref={heroRef} className="min-h-screen flex flex-col justify-center items-center text-center p-4 relative overflow-hidden bg-gradient-to-b from-background to-background/80">
+      {/* Enhanced grid background */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:14px_14px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none" />
       
-      {/* Dynamic background gradients */}
+      {/* Enhanced background gradients */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
           animate={{
             scale: [1, 1.2, 1],
-            rotate: [0, 90, 0],
-            x: [-20, 20, -20],
-            y: [-20, 20, -20]
-          }}
-          transition={{
-            duration: 20,
-            repeat: Infinity,
-            ease: "linear"
-          }}
-          style={{ y }}
-          className="absolute -top-1/2 -left-1/2 w-full h-full bg-gradient-to-br from-primary/30 via-purple-500/20 to-transparent rounded-full blur-3xl dark:from-primary/20 dark:via-purple-500/10"
-        />
-        <motion.div
-          animate={{
-            scale: [1.2, 1, 1.2],
-            rotate: [90, 0, 90],
-            x: [20, -20, 20],
-            y: [20, -20, 20]
+            rotate: [0, 180, 0],
+            x: [-30, 30, -30],
+            y: [-30, 30, -30]
           }}
           transition={{
             duration: 25,
@@ -92,22 +77,22 @@ export const Hero = () => {
             ease: "linear"
           }}
           style={{ y }}
-          className="absolute -bottom-1/2 -right-1/2 w-full h-full bg-gradient-to-tl from-purple-500/30 via-primary/20 to-transparent rounded-full blur-3xl dark:from-purple-500/20 dark:via-primary/10"
+          className="absolute -top-1/2 -left-1/2 w-[200%] h-[200%] bg-gradient-to-br from-primary/40 via-purple-500/30 to-transparent rounded-full blur-3xl dark:from-primary/30 dark:via-purple-500/20"
         />
-
-        {/* Floating particles */}
+        
+        {/* Add more floating particles */}
         <motion.div
           variants={glowAnimation}
           initial="initial"
           animate="animate"
-          className="absolute top-1/4 left-1/4 w-2 h-2 bg-primary rounded-full"
+          className="absolute top-1/3 right-1/3 w-3 h-3 bg-primary/60 rounded-full"
         />
         <motion.div
           variants={glowAnimation}
           initial="initial"
           animate="animate"
-          transition={{ delay: 1 }}
-          className="absolute bottom-1/4 right-1/4 w-2 h-2 bg-purple-500 rounded-full"
+          transition={{ delay: 1.5 }}
+          className="absolute bottom-1/3 left-1/3 w-2 h-2 bg-purple-400/60 rounded-full"
         />
       </div>
 
@@ -115,12 +100,12 @@ export const Hero = () => {
         variants={container}
         initial="hidden"
         animate="show"
-        className="space-y-6 relative z-10"
+        className="space-y-8 relative z-10 max-w-4xl mx-auto"
       >
         <motion.div variants={item}>
-          <h1 className="text-4xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary via-purple-400 to-primary animate-gradient relative inline-block group">
+          <h1 className="text-5xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary via-purple-400 to-primary animate-gradient relative inline-block group">
             <motion.span
-              className="absolute -inset-1 rounded-xl bg-gradient-to-r from-primary/20 to-purple-500/20 blur-xl group-hover:blur-2xl transition-all duration-500 opacity-70 group-hover:opacity-100"
+              className="absolute -inset-2 rounded-2xl bg-gradient-to-r from-primary/30 to-purple-500/30 blur-2xl group-hover:blur-3xl transition-all duration-500 opacity-70 group-hover:opacity-100"
               animate={{
                 opacity: [0.5, 0.8, 0.5],
               }}
@@ -150,12 +135,12 @@ export const Hero = () => {
         
         <motion.div 
           variants={item}
-          className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8"
+          className="flex flex-col sm:flex-row gap-5 justify-center items-center mt-10"
         >
           <Button 
             variant="default" 
             onClick={() => handleDownload('en')}
-            className="w-full sm:w-auto bg-gradient-to-r from-primary to-purple-600 hover:from-primary/90 hover:to-purple-600/90 transition-all duration-300 shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 dark:shadow-primary/10 dark:hover:shadow-primary/20"
+            className="w-full sm:w-auto bg-gradient-to-r from-primary to-purple-600 hover:from-primary/80 hover:to-purple-600/80 transition-all duration-500 shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/40 hover:-translate-y-0.5 dark:shadow-primary/10 dark:hover:shadow-primary/20"
           >
             <FileDown className="mr-2" />
             Download Resume (EN)
@@ -163,7 +148,7 @@ export const Hero = () => {
           <Button 
             variant="default" 
             onClick={() => handleDownload('fr')}
-            className="w-full sm:w-auto bg-gradient-to-r from-purple-600 to-primary hover:from-purple-600/90 hover:to-primary/90 transition-all duration-300"
+            className="w-full sm:w-auto bg-gradient-to-r from-purple-600 to-primary hover:from-purple-600/80 hover:to-primary/80 transition-all duration-500 hover:-translate-y-0.5"
           >
             <FileDown className="mr-2" />
             Download Resume (FR)
@@ -172,12 +157,12 @@ export const Hero = () => {
 
         <motion.div 
           variants={item}
-          className="flex gap-4 justify-center mt-8"
+          className="flex gap-6 justify-center mt-10"
         >
           <Button 
             variant="outline" 
             size="icon"
-            className="rounded-full hover:scale-110 transition-transform duration-300 hover:bg-primary/10 border-primary/20"
+            className="rounded-full hover:scale-110 transition-transform duration-300 hover:bg-primary/10 border-primary/20 hover:border-primary/40"
             onClick={() => window.open("https://github.com/niangamadou888/", "_blank")}
           >
             <GithubIcon className="h-5 w-5" />
