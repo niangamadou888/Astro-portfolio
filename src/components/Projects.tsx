@@ -72,7 +72,7 @@ export const Projects = () => {
       title: "Ytchap",
       description: "YTChap is an exclusive online platform that improves navigation and viewing capabilities of videos, especially those on sites like YouTube. Creators can divide their videos into chapters using this tool, thereby granting viewers relatively easier access to particular areas of the content based on their preferences.",
       image: "/ytchap.png",
-      tags: ["Next js", "Javascropt", "Google Gemini", "Nodejs", "Tailwind CSS"],
+      tags: ["Next js", "Javascript", "Google Gemini", "Nodejs", "Tailwind CSS"],
       liveUrl: "https://ytchap.com/",
       githubUrl: "https://github.com/niangamadou888/ytchap"
     },
@@ -201,7 +201,7 @@ export const Projects = () => {
                       <Button
                         size="icon"
                         variant="ghost"
-                        className="h-8 w-8"
+                        className="h-8 w-8 text-white"
                         onClick={() => window.open(project.liveUrl, '_blank')}
                       >
                         <ExternalLinkIcon className="h-4 w-4" />
@@ -211,7 +211,7 @@ export const Projects = () => {
                       <Button
                         size="icon"
                         variant="ghost"
-                        className="h-8 w-8"
+                        className="h-8 w-8 text-white"
                         onClick={() => window.open(project.githubUrl, '_blank')}
                       >
                         <GithubIcon className="h-4 w-4" />
