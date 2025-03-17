@@ -21,22 +21,6 @@ function TechItem({ name, icon }: TechItemProps) {
 export function TechStack() {
   const technologies = [
     {
-      name: "HTML",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
-    },
-    {
-      name: "CSS",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
-    },
-    {
-      name: "Bootstrap",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg"
-    },
-    {
-      name: "JavaScript",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-    },
-    {
       name: "React",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
     },
@@ -53,18 +37,6 @@ export function TechStack() {
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg"
     },
     {
-      name: "Golang",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg"
-    },
-    {
-      name: "C",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg"
-    },
-    {
-      name: "C++",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"
-    },
-    {
       name: "C#",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg"
     },
@@ -77,10 +49,6 @@ export function TechStack() {
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
     },
     {
-      name: "Python",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
-    },
-    {
       name: "SQL",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
     },
@@ -89,44 +57,12 @@ export function TechStack() {
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
     },
     {
-      name: "Linux",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg"
-    },
-    {
-      name: "VS Code",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
-    },
-    {
-      name: "Django",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg"
-    },
-    {
       name: "Unity",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg"
     },
     {
-      name: "Unreal Engine",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unrealengine/unrealengine-original.svg"
-    },
-    {
-      name: "Android Studio",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg"
-    },
-    {
       name: "TypeScript",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
-    },
-    {
-      name: "Tailwind CSS",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
-    },
-    {
-      name: "PostgreSQL",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
-    },
-    {
-      name: "Docker",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
     }
   ];
 
