@@ -58,89 +58,68 @@ export const Hero = () => {
   };
 
   return (
-    <section ref={heroRef} className="min-h-screen flex flex-col justify-center items-center text-center p-4 relative overflow-hidden bg-gradient-to-b from-background to-background/80">
-      {/* Enhanced grid background */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:14px_14px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none" />
+    <section ref={heroRef} className="min-h-screen flex flex-col justify-center items-center text-center p-4 relative overflow-hidden">
+      {/* Modern geometric background */}
+      <div className="absolute inset-0 bg-[linear-gradient(45deg,#80808008_1px,transparent_1px),linear-gradient(135deg,#80808008_1px,transparent_1px)] bg-[size:20px_20px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
       
-      {/* Enhanced background gradients */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <motion.div
-          animate={{
-            scale: [1, 1.2, 1],
-            rotate: [0, 180, 0],
-            x: [-30, 30, -30],
-            y: [-30, 30, -30]
-          }}
-          transition={{
-            duration: 25,
-            repeat: Infinity,
-            ease: "linear"
-          }}
-          style={{ y }}
-          className="absolute -top-1/2 -left-1/2 w-[200%] h-[200%] bg-gradient-to-br from-primary/40 via-purple-500/30 to-transparent rounded-full blur-3xl dark:from-primary/30 dark:via-purple-500/20"
-        />
-        
-        {/* Add more floating particles */}
-        <motion.div
-          variants={glowAnimation}
-          initial="initial"
-          animate="animate"
-          className="absolute top-1/3 right-1/3 w-3 h-3 bg-primary/60 rounded-full"
-        />
-        <motion.div
-          variants={glowAnimation}
-          initial="initial"
-          animate="animate"
-          transition={{ delay: 1.5 }}
-          className="absolute bottom-1/3 left-1/3 w-2 h-2 bg-purple-400/60 rounded-full"
-        />
+      {/* Enhanced gradient effects */}
+      <div className="absolute inset-0">
+        <div className="absolute w-full h-full bg-[radial-gradient(circle_at_center,rgba(var(--primary-rgb),0.08)_0%,transparent_65%)]" />
+        <div className="absolute w-full h-full bg-[radial-gradient(circle_at_top_right,rgba(147,51,234,0.08)_0%,transparent_65%)]" />
       </div>
 
       <motion.div
         variants={container}
         initial="hidden"
         animate="show"
-        className="space-y-8 relative z-10 max-w-4xl mx-auto"
+        className="space-y-10 relative z-10 max-w-4xl mx-auto"
       >
-        <motion.div variants={item}>
-          <h1 className="text-5xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary via-purple-400 to-primary animate-gradient relative inline-block group">
-            <motion.span
-              className="absolute -inset-2 rounded-2xl bg-gradient-to-r from-primary/30 to-purple-500/30 blur-2xl group-hover:blur-3xl transition-all duration-500 opacity-70 group-hover:opacity-100"
+        <motion.div variants={item} className="space-y-4">
+          <div className="inline-block">
+            <motion.div
               animate={{
-                opacity: [0.5, 0.8, 0.5],
+                scale: [1, 1.02, 1],
+                transition: { duration: 2, repeat: Infinity }
               }}
-              transition={{
-                duration: 3,
-                repeat: Infinity,
-                ease: "easeInOut"
-              }}
-            />
-            Hello, I'm Amadou Boubacar Niang
-          </h1>
-        </motion.div>
+            >
+              <h1 className="text-5xl md:text-7xl font-bold relative">
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-purple-400 to-primary bg-[length:200%_auto] animate-text-shine">
+                  Hello, I'm Amadou Boubacar Niang
+                </span>
+                <div className="absolute -inset-x-6 -inset-y-4 bg-gradient-to-r from-primary/20 via-purple-500/20 to-primary/20 blur-2xl opacity-50 group-hover:opacity-75 transition duration-500" />
+              </h1>
+            </motion.div>
+          </div>
 
-        <motion.div variants={item}>
-          <p className="text-xl md:text-2xl font-medium text-muted-foreground/90 dark:text-muted-foreground/80 relative inline-flex items-center gap-2">
-            <Sparkles className="w-5 h-5 text-primary animate-pulse" />
-            Software Developer (Web, Mobile, Gaming...)
-          </p>
+          <motion.p variants={item} className="text-xl md:text-2xl font-medium text-muted-foreground/90">
+            <span className="inline-flex items-center gap-3 px-4 py-1.5 rounded-full bg-primary/5 border border-primary/10">
+              <Sparkles className="w-5 h-5 text-primary" />
+              Software Developer
+              <span className="text-primary/60">•</span>
+              <span className="text-primary/80">Web</span>
+              <span className="text-primary/60">•</span>
+              <span className="text-primary/80">Mobile</span>
+              <span className="text-primary/60">•</span>
+              <span className="text-primary/80">Gaming</span>
+            </span>
+          </motion.p>
         </motion.div>
 
         <motion.p 
           variants={item}
-          className="max-w-lg mx-auto text-muted-foreground/80 text-lg"
+          className="text-lg text-muted-foreground/80 max-w-lg mx-auto backdrop-blur-sm bg-background/30 px-6 py-3 rounded-full"
         >
           I build exceptional digital experiences that make people's lives easier.
         </motion.p>
         
         <motion.div 
           variants={item}
-          className="flex flex-col sm:flex-row gap-5 justify-center items-center mt-10"
+          className="flex flex-col sm:flex-row gap-4 justify-center items-center"
         >
           <Button 
             variant="default" 
             onClick={() => handleDownload('en')}
-            className="w-full sm:w-auto bg-gradient-to-r from-primary to-purple-600 hover:from-primary/80 hover:to-purple-600/80 transition-all duration-500 shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/40 hover:-translate-y-0.5 dark:shadow-primary/10 dark:hover:shadow-primary/20"
+            className="w-full sm:w-auto bg-gradient-to-r from-primary to-purple-600 hover:opacity-90 transition-all duration-300 shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 hover:-translate-y-0.5"
           >
             <FileDown className="mr-2" />
             Download Resume (EN)
@@ -148,7 +127,7 @@ export const Hero = () => {
           <Button 
             variant="default" 
             onClick={() => handleDownload('fr')}
-            className="w-full sm:w-auto bg-gradient-to-r from-purple-600 to-primary hover:from-purple-600/80 hover:to-primary/80 transition-all duration-500 hover:-translate-y-0.5"
+            className="w-full sm:w-auto bg-gradient-to-r from-purple-600 to-primary hover:opacity-90 transition-all duration-300 hover:-translate-y-0.5"
           >
             <FileDown className="mr-2" />
             Download Resume (FR)
@@ -157,32 +136,23 @@ export const Hero = () => {
 
         <motion.div 
           variants={item}
-          className="flex gap-6 justify-center mt-10"
+          className="flex gap-6 justify-center pt-4"
         >
-          <Button 
-            variant="outline" 
-            size="icon"
-            className="rounded-full hover:scale-110 transition-transform duration-300 hover:bg-primary/10 border-primary/20 hover:border-primary/40"
-            onClick={() => window.open("https://github.com/niangamadou888/", "_blank")}
-          >
-            <GithubIcon className="h-5 w-5" />
-          </Button>
-          <Button 
-            variant="outline" 
-            size="icon"
-            className="rounded-full hover:scale-110 transition-transform duration-300 hover:bg-primary/10 border-primary/20"
-            onClick={() => window.open("https://www.linkedin.com/in/amadou-boubacar-niang-09b973160/", "_blank")}
-          >
-            <LinkedinIcon className="h-5 w-5" />
-          </Button>
-          <Button 
-            variant="outline" 
-            size="icon"
-            className="rounded-full hover:scale-110 transition-transform duration-300 hover:bg-primary/10 border-primary/20"
-            onClick={() => window.open("mailto:amadouniang2001@gmail.com", "_blank")}
-          >
-            <MailIcon className="h-5 w-5" />
-          </Button>
+          {[
+            { icon: GithubIcon, url: "https://github.com/niangamadou888/" },
+            { icon: LinkedinIcon, url: "https://www.linkedin.com/in/amadou-boubacar-niang-09b973160/" },
+            { icon: MailIcon, url: "mailto:amadouniang2001@gmail.com" }
+          ].map((social, index) => (
+            <Button 
+              key={index}
+              variant="outline" 
+              size="icon"
+              className="rounded-full hover:scale-110 transition-all duration-300 hover:bg-primary/5 border-primary/10 hover:border-primary/20 backdrop-blur-sm"
+              onClick={() => window.open(social.url, "_blank")}
+            >
+              <social.icon className="h-5 w-5" />
+            </Button>
+          ))}
         </motion.div>
       </motion.div>
     </section>
