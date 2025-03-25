@@ -58,7 +58,7 @@ export const Hero = () => {
   };
 
   return (
-    <section ref={heroRef} className="min-h-screen flex flex-col justify-center items-center text-center p-4 relative overflow-hidden">
+    <section ref={heroRef} className="min-h-screen flex flex-col justify-center items-center text-center p-4 sm:p-6 relative overflow-hidden">
       {/* Modern geometric background */}
       <div className="absolute inset-0 bg-[linear-gradient(45deg,#80808008_1px,transparent_1px),linear-gradient(135deg,#80808008_1px,transparent_1px)] bg-[size:20px_20px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
       
@@ -72,7 +72,7 @@ export const Hero = () => {
         variants={container}
         initial="hidden"
         animate="show"
-        className="space-y-10 relative z-10 max-w-4xl mx-auto"
+        className="space-y-6 sm:space-y-10 relative z-10 max-w-4xl mx-auto"
       >
         <motion.div variants={item} className="space-y-4">
           <div className="inline-block">
@@ -82,7 +82,7 @@ export const Hero = () => {
                 transition: { duration: 2, repeat: Infinity }
               }}
             >
-              <h1 className="text-5xl md:text-7xl font-bold relative">
+              <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold relative px-2 sm:px-0">
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-purple-400 to-primary bg-[length:200%_auto] animate-text-shine">
                   Hello, I'm Amadou Boubacar Niang
                 </span>
@@ -91,15 +91,15 @@ export const Hero = () => {
             </motion.div>
           </div>
 
-          <motion.p variants={item} className="text-xl md:text-2xl font-medium text-muted-foreground/90">
-            <span className="inline-flex items-center gap-3 px-4 py-1.5 rounded-full bg-primary/5 border border-primary/10">
-              <Sparkles className="w-5 h-5 text-primary" />
+          <motion.p variants={item} className="text-lg sm:text-xl md:text-2xl font-medium text-muted-foreground/90">
+            <span className="inline-flex items-center gap-2 sm:gap-3 px-3 sm:px-4 py-1.5 rounded-full bg-primary/5 border border-primary/10 flex-wrap justify-center">
+              <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
               Software Developer
-              <span className="text-primary/60">•</span>
+              <span className="text-primary/60 hidden sm:inline">•</span>
               <span className="text-primary/80">Web</span>
-              <span className="text-primary/60">•</span>
+              <span className="text-primary/60 hidden sm:inline">•</span>
               <span className="text-primary/80">Mobile</span>
-              <span className="text-primary/60">•</span>
+              <span className="text-primary/60 hidden sm:inline">•</span>
               <span className="text-primary/80">Gaming</span>
             </span>
           </motion.p>
@@ -107,14 +107,14 @@ export const Hero = () => {
 
         <motion.p 
           variants={item}
-          className="text-lg text-muted-foreground/80 max-w-lg mx-auto backdrop-blur-sm bg-background/30 px-6 py-3 rounded-full"
+          className="text-base sm:text-lg text-muted-foreground/80 max-w-lg mx-auto backdrop-blur-sm bg-background/30 px-4 sm:px-6 py-2 sm:py-3 rounded-full"
         >
           I build exceptional digital experiences that make people's lives easier.
         </motion.p>
         
         <motion.div 
           variants={item}
-          className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+          className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center w-full sm:w-auto px-4 sm:px-0"
         >
           <Button 
             variant="default" 
@@ -136,7 +136,7 @@ export const Hero = () => {
 
         <motion.div 
           variants={item}
-          className="flex gap-6 justify-center pt-4"
+          className="flex gap-4 sm:gap-6 justify-center pt-2 sm:pt-4"
         >
           {[
             { icon: GithubIcon, url: "https://github.com/niangamadou888/" },
