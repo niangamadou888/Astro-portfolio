@@ -85,12 +85,11 @@ export const Projects = () => {
       githubUrl: "https://github.com/niangamadou888/ai-detector"
     },
     {
-      title: "TopSMM Reseller",
-      description: "An SMM panel platform for managing and reselling social media marketing services, including likes, followers, and engagement across various platforms.",
-      image: "/toppsmm.png",
-      tags: ["Vite", "Bootstrap"],
-      liveUrl: "https://topsmmreseller.vercel.app/",
-      githubUrl: "https://github.com/ytlab23/topsmmreseller"
+      title: "Glowlikes",
+      description: "GlowyViews is a multi-platform social media service that helps users purchase social engagement metrics like followers, likes, and views. The platform supports various social networks including Instagram, Facebook, TikTok, Twitter/X, LinkedIn, YouTube, Spotify, and Telegram.",
+      image: "/glowlikes.png",
+      tags: ["React","Vite", "Tailwind CSS"],
+      liveUrl: "https://glowlikes.it/",
     },
     {
       title: "Budget App",
