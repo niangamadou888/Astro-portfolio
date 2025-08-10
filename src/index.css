@@ -30,6 +30,9 @@
     --input: 240 5.9% 90%;
     --ring: 240 5.9% 10%;
     --radius: 0.75rem;
+    /* Added RGB fallback for gradient effects used across components */
+    --primary-rgb: 99, 102, 241; /* indigo-500 like */
+    --accent-rgb: 147, 51, 234; /* purple-600 like */
   }
  
   .dark {
@@ -52,6 +55,8 @@
     --border: 240 3.7% 15.9%;
     --input: 240 3.7% 15.9%;
     --ring: 240 4.9% 83.9%;
+    --primary-rgb: 165, 180, 252; /* indigo-300 like for dark */
+    --accent-rgb: 192, 132, 252;  /* purple-300 like for dark */
   }
 }
 
@@ -93,6 +98,73 @@
 }
 
 @layer utilities {
+  /* Glassmorphism helpers */
+  .glass {
+    @apply bg-background/40 backdrop-blur-md border border-white/10 shadow-lg;
+  }
+  .glass-strong {
+    @apply bg-background/30 backdrop-blur-xl border border-white/10 shadow-xl;
+  }
+
+  /* Subtle lift on hover */
+  .hover-lift {
+    @apply transition-transform duration-300 will-change-transform hover:-translate-y-0.5;
+  }
+
+  /* Gradient border using mask trick */
+  .gradient-border {
+    position: relative;
+  }
+  .gradient-border::before {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(135deg, rgba(var(--primary-rgb),0.35), rgba(var(--accent-rgb),0.35));
+    -webkit-mask: 
+      linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+    pointer-events: none;
+  }
+
+  /* Button shimmer effect */
+  .btn-shine {
+    position: relative;
+    overflow: hidden;
+  }
+  .btn-shine::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, transparent, rgba(255,255,255,0.15), transparent);
+    transform: translateX(-100%);
+  }
+  .btn-shine:hover::after {
+    transform: translateX(100%);
+    transition: transform 800ms ease;
+  }
+
+  /* Text shine animation used in hero */
+  .animate-text-shine {
+    background-size: 200% auto;
+    animation: textShine 3.5s linear infinite;
+  }
+
+  @keyframes textShine {
+    to { background-position: 200% center; }
+  }
+
+  /* Ping slow utility used in Contact */
+  .animate-ping-slow {
+    animation: pingSlow 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+  @keyframes pingSlow {
+    75%, 100% { transform: scale(2); opacity: 0; }
+  }
+
   .animate-gradient {
     animation: gradient 8s ease infinite;
     background-size: 400% 400%;

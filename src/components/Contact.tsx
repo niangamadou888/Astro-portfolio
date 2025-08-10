@@ -1,8 +1,10 @@
 import { Card } from "./ui/card";
 import { Button } from "./ui/button";
 import { MailIcon } from "lucide-react";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 export const Contact = () => {
+  const { t } = useLanguage();
   return (
     <section id="contact" className="py-32 px-4 relative overflow-hidden">
       {/* Background effects */}
@@ -15,40 +17,39 @@ export const Contact = () => {
         <div className="mb-16 space-y-4">
           <div className="inline-flex items-center justify-center gap-3 text-primary/80 bg-primary/5 px-4 py-2 rounded-full text-sm font-medium mb-4">
             <MailIcon className="w-4 h-4" />
-            Contact
+            {t('contact.badge')}
           </div>
           <h2 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary via-purple-400 to-primary animate-text-shine">
-            Get In Touch
+            {t('contact.title')}
           </h2>
-          <p className="text-xl text-muted-foreground">Let's create something amazing together</p>
+          <p className="text-xl text-muted-foreground">{t('contact.subtitle')}</p>
         </div>
         
-        <Card className="p-12 max-w-2xl mx-auto backdrop-blur-sm bg-background/30 border-primary/10 hover:shadow-xl hover:shadow-primary/5 transition-all duration-500 group">
+        <Card className="p-12 max-w-2xl mx-auto glass gradient-border hover:shadow-xl hover:shadow-primary/10 transition-all duration-500 group hover-lift">
           <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-purple-500/5 to-primary/5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
           
           <div className="relative space-y-8">
             <p className="text-lg text-muted-foreground leading-relaxed">
-              I'm currently open to new opportunities and would love to hear from you.
-              Whether you have a question or just want to say hi, feel free to reach out!
+              {t('contact.p')}
             </p>
 
             <div className="flex flex-col items-center gap-6">
               <Button 
                 size="lg"
-                className="relative group/btn px-8 py-6 h-auto bg-primary hover:bg-primary/90 transition-all duration-300"
+                className="relative group/btn px-8 py-6 h-auto bg-primary hover:bg-primary/90 transition-all duration-300 btn-shine"
                 onClick={() => window.open("mailto:amadouniang2001@gmail.com", "_blank")}
               >
                 <span className="absolute inset-0 rounded-lg bg-gradient-to-r from-primary/50 to-purple-500/50 blur-md opacity-0 group-hover/btn:opacity-50 transition-opacity duration-300" />
                 <span className="relative flex items-center gap-2 text-lg font-medium">
                   <MailIcon className="h-5 w-5" />
-                  Say Hello
+                  {t('contact.cta')}
                 </span>
               </Button>
 
               <div className="w-32 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
               
               <p className="text-muted-foreground/60 text-sm">
-                Looking forward to hearing from you!
+                {t('contact.footer')}
               </p>
             </div>
           </div>

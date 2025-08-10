@@ -2,8 +2,10 @@ import { Card } from "./ui/card";
 import { AwardIcon, CalendarIcon, ExternalLinkIcon } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "./ui/button";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 export const Certifications = () => {
+  const { t } = useLanguage();
   const certifications = [
     {
       title: "Legacy Full Stack Developer",
@@ -38,7 +40,7 @@ export const Certifications = () => {
           <div className="bg-primary/10 p-2.5 rounded-xl">
             <AwardIcon className="w-6 h-6 text-primary" />
           </div>
-          <h2 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/50">Certifications</h2>
+          <h2 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary via-purple-400 to-primary animate-text-shine">{t('certifications.title')}</h2>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -50,7 +52,7 @@ export const Certifications = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
-              <Card className="p-8 h-full backdrop-blur-sm bg-background/30 border-primary/10 hover:shadow-xl hover:shadow-primary/5 transition-all duration-500 group relative">
+              <Card className="p-8 h-full glass gradient-border hover:shadow-xl hover:shadow-primary/10 transition-all duration-500 group relative hover-lift">
                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary/50 to-purple-500/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 
                 <div className="flex flex-col h-full">
@@ -83,7 +85,7 @@ export const Certifications = () => {
                         className="w-full justify-between hover:bg-primary/10 transition-all duration-300 group/btn"
                         onClick={() => window.open(cert.link, '_blank')}
                       >
-                        View Certificate
+                        {t('certifications.view')}
                         <ExternalLinkIcon className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform duration-300" />
                       </Button>
                     )}

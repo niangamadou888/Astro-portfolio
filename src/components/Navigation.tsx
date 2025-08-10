@@ -3,19 +3,21 @@ import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
 import { Button } from "./ui/button";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
+  const { t } = useLanguage();
 
   const menuItems = [
-    { name: "Home", href: "#home" },
-    { name: "About", href: "#about" },
-    { name: "Experience", href: "#experience" },
-    { name: "Education", href: "#education" },
-    { name: "Certifications", href: "#certifications" },
-    { name: "Projects", href: "#projects" },
-    { name: "Contact", href: "#contact" },
+    { name: t("nav.home"), href: "#home" },
+    { name: t("nav.about"), href: "#about" },
+    { name: t("nav.experience"), href: "#experience" },
+    { name: t("nav.education"), href: "#education" },
+    { name: t("nav.certifications"), href: "#certifications" },
+    { name: t("nav.projects"), href: "#projects" },
+    { name: t("nav.contact"), href: "#contact" },
   ];
 
   useEffect(() => {
@@ -96,7 +98,7 @@ export const Navigation = () => {
         animate={{ opacity: isOpen ? 1 : 0, x: isOpen ? 0 : "100%" }}
         transition={{ duration: 0.3 }}
         className={cn(
-          "fixed inset-y-0 right-0 z-40 w-full bg-background/95 backdrop-blur-sm md:hidden",
+          "fixed inset-y-0 right-0 z-40 w-full bg-background/95 backdrop-blur-lg md:hidden",
           isOpen ? "pointer-events-auto" : "pointer-events-none"
         )}
       >

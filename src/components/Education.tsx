@@ -1,44 +1,81 @@
 import { Card } from "./ui/card";
 import { GraduationCapIcon, CalendarIcon, MapPinIcon } from "lucide-react";
 import { motion } from "framer-motion";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 export const Education = () => {
+  const { t, language } = useLanguage();
   const education = [
     {
-      degree: "Master's degree in Software Engineering",
+      degree:
+        language === 'fr'
+          ? "Master en Génie Logiciel"
+          : "Master's degree in Software Engineering",
       school: "Université Numérique Cheikh Hamidou Kane",
-      location: "Dakar, Senegal",
-      period: "Apr 2024 - Present",
-      description: "Advanced studies in Software Engineering, focusing on modern software development practices and methodologies.",
+      location: language === 'fr' ? "Dakar, Sénégal" : "Dakar, Senegal",
+      period: language === 'fr' ? "Avr 2024 - Actuel" : "Apr 2024 - Present",
+      description:
+        language === 'fr'
+          ? "Études avancées en génie logiciel, axées sur les pratiques et méthodologies modernes de développement."
+          : "Advanced studies in Software Engineering, focusing on modern software development practices and methodologies.",
       achievements: [
-        "Specializing in advanced software architecture",
-        "Focus on enterprise-level application development",
-        "Research in modern software engineering practices"
+        language === 'fr'
+          ? "Spécialisation en architectures logicielles avancées"
+          : "Specializing in advanced software architecture",
+        language === 'fr'
+          ? "Focus sur le développement d'applications d'entreprise"
+          : "Focus on enterprise-level application development",
+        language === 'fr'
+          ? "Recherche en pratiques modernes d'ingénierie logicielle"
+          : "Research in modern software engineering practices",
       ]
     },
     {
-      degree: "Bachelor's degree in Software Development",
+      degree:
+        language === 'fr'
+          ? "Licence en Développement Logiciel"
+          : "Bachelor's degree in Software Development",
       school: "Université Numérique Cheikh Hamidou Kane",
-      location: "Dakar, Senegal",
-      period: "Oct 2019 - Oct 2023",
-      description: "Comprehensive study of software development across web, mobile, and gaming platforms.",
+      location: language === 'fr' ? "Dakar, Sénégal" : "Dakar, Senegal",
+      period: language === 'fr' ? "Oct 2019 - Oct 2023" : "Oct 2019 - Oct 2023",
+      description:
+        language === 'fr'
+          ? "Études approfondies du développement logiciel sur les plateformes web, mobile et jeux."
+          : "Comprehensive study of software development across web, mobile, and gaming platforms.",
       achievements: [
-        "Full-stack web development expertise",
-        "Mobile application development for iOS and Android",
-        "Game development and interactive media",
-        "Project-based learning with real-world applications"
+        language === 'fr'
+          ? "Expertise en développement web full-stack"
+          : "Full-stack web development expertise",
+        language === 'fr'
+          ? "Développement d'applications mobiles pour iOS et Android"
+          : "Mobile application development for iOS and Android",
+        language === 'fr'
+          ? "Développement de jeux et médias interactifs"
+          : "Game development and interactive media",
+        language === 'fr'
+          ? "Apprentissage par projets avec des applications réelles"
+          : "Project-based learning with real-world applications",
       ]
     },
     {
-      degree: "High School Diploma",
+      degree: language === 'fr' ? "Baccalauréat" : "High School Diploma",
       school: "Lycée Technique Andre Peytavin",
-      location: "Saint-Louis, Senegal",
-      period: "Oct 2016 - Jul 2019",
-      description: "Science and Technique of Economics and Management",
+      location: language === 'fr' ? "Saint-Louis, Sénégal" : "Saint-Louis, Senegal",
+      period: language === 'fr' ? "Oct 2016 - Juil 2019" : "Oct 2016 - Jul 2019",
+      description:
+        language === 'fr'
+          ? "Sciences et Techniques de l'Économie et de la Gestion"
+          : "Science and Technique of Economics and Management",
       achievements: [
-        "Strong foundation in economics and management principles",
-        "Technical training in business applications",
-        "Development of analytical and problem-solving skills"
+        language === 'fr'
+          ? "Solides bases en économie et gestion"
+          : "Strong foundation in economics and management principles",
+        language === 'fr'
+          ? "Formation technique aux applications métiers"
+          : "Technical training in business applications",
+        language === 'fr'
+          ? "Développement des compétences analytiques et de résolution de problèmes"
+          : "Development of analytical and problem-solving skills",
       ]
     }
   ];
@@ -57,7 +94,7 @@ export const Education = () => {
           <div className="bg-primary/10 p-2.5 rounded-xl">
             <GraduationCapIcon className="w-6 h-6 text-primary" />
           </div>
-          <h2 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/50">Education</h2>
+          <h2 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary via-purple-400 to-primary animate-text-shine">{t('education.title')}</h2>
         </div>
 
         <div className="relative space-y-8">
@@ -71,7 +108,7 @@ export const Education = () => {
               transition={{ duration: 0.5, delay: index * 0.2 }}
               viewport={{ once: true }}
             >
-              <Card className="p-8 backdrop-blur-sm bg-background/30 border-primary/10 relative hover:shadow-xl hover:shadow-primary/5 transition-all duration-500">
+              <Card className="p-8 glass gradient-border relative hover:shadow-xl hover:shadow-primary/10 transition-all duration-500 hover-lift">
                 <div className="absolute -left-3 top-10 w-6 h-6 rounded-full bg-primary/20 hidden md:flex items-center justify-center">
                   <div className="w-2 h-2 rounded-full bg-primary" />
                 </div>

@@ -2,6 +2,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { GithubIcon, LinkedinIcon, MailIcon, FileDown, Sparkles } from "lucide-react";
 import { Button } from "./ui/button";
 import { toast } from "./ui/use-toast";
+import { useLanguage } from "@/i18n/LanguageContext";
 import { useEffect, useRef, useState } from "react";
 
 const container = {
@@ -43,6 +44,7 @@ const glowAnimation = {
 };
 
 export const Hero = () => {
+  const { t } = useLanguage();
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const heroRef = useRef<HTMLElement>(null);
   const { scrollY } = useScroll();
@@ -52,8 +54,8 @@ export const Hero = () => {
     window.open(pdfUrl, '_blank');
 
     toast({
-      title: "Opening Resume",
-      description: `Opening resume in ${language === 'en' ? 'English' : 'French'}`,
+      title: t('hero.toast.title'),
+      description: language === 'en' ? t('hero.toast.desc.en') : t('hero.toast.desc.fr'),
     });
   };
 
@@ -84,7 +86,7 @@ export const Hero = () => {
             >
               <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold relative px-2 sm:px-0">
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-purple-400 to-primary bg-[length:200%_auto] animate-text-shine">
-                  Hello, I'm Amadou Boubacar Niang
+                  {t('hero.greeting')}
                 </span>
                 <div className="absolute -inset-x-6 -inset-y-4 bg-gradient-to-r from-primary/20 via-purple-500/20 to-primary/20 blur-2xl opacity-50 group-hover:opacity-75 transition duration-500" />
               </h1>
@@ -94,13 +96,13 @@ export const Hero = () => {
           <motion.p variants={item} className="text-lg sm:text-xl md:text-2xl font-medium text-muted-foreground/90">
             <span className="inline-flex items-center gap-2 sm:gap-3 px-3 sm:px-4 py-1.5 rounded-full bg-primary/5 border border-primary/10 flex-wrap justify-center">
               <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
-              Software Developer
+              {t('hero.role.software')}
               <span className="text-primary/60 hidden sm:inline">•</span>
-              <span className="text-primary/80">Web</span>
+              <span className="text-primary/80">{t('hero.role.web')}</span>
               <span className="text-primary/60 hidden sm:inline">•</span>
-              <span className="text-primary/80">Mobile</span>
+              <span className="text-primary/80">{t('hero.role.mobile')}</span>
               <span className="text-primary/60 hidden sm:inline">•</span>
-              <span className="text-primary/80">Gaming</span>
+              <span className="text-primary/80">{t('hero.role.gaming')}</span>
             </span>
           </motion.p>
         </motion.div>
@@ -109,7 +111,7 @@ export const Hero = () => {
           variants={item}
           className="text-base sm:text-lg text-muted-foreground/80 max-w-lg mx-auto backdrop-blur-sm bg-background/30 px-4 sm:px-6 py-2 sm:py-3 rounded-full"
         >
-          I build exceptional digital experiences that make people's lives easier.
+          {t('hero.subtitle')}
         </motion.p>
         
         <motion.div 
@@ -122,7 +124,7 @@ export const Hero = () => {
             className="w-full sm:w-auto bg-gradient-to-r from-primary to-purple-600 hover:opacity-90 transition-all duration-300 shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 hover:-translate-y-0.5"
           >
             <FileDown className="mr-2" />
-            Download Resume (EN)
+            {t('hero.download.en')}
           </Button>
           <Button 
             variant="default" 
@@ -130,7 +132,7 @@ export const Hero = () => {
             className="w-full sm:w-auto bg-gradient-to-r from-purple-600 to-primary hover:opacity-90 transition-all duration-300 hover:-translate-y-0.5"
           >
             <FileDown className="mr-2" />
-            Download Resume (FR)
+            {t('hero.download.fr')}
           </Button>
         </motion.div>
 
