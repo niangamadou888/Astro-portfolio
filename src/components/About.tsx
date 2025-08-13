@@ -36,9 +36,6 @@ export const About = () => {
                 {t('about.p1')}
               </p>
               <div className="h-px w-1/3 bg-gradient-to-r from-primary/20 to-transparent my-6" />
-              <p className="text-muted-foreground leading-relaxed">
-                {t('about.p2')}
-              </p>
               <p className="text-primary font-medium mt-6 border-l-2 border-primary pl-4">
                 {t('about.p3')}
               </p>

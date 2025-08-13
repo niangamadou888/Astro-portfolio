@@ -32,8 +32,7 @@ const translations: Translations = {
 
     // About
     "about.title": "About Me",
-    "about.p1": "I am a highly motivated and driven 23-year-old student who is eager to take on new challenges that align with my career ambitions. With a strong work ethic and a passion for learning, I am committed to bringing my best to every project and working collaboratively within a team to achieve success.",
-    "about.p2": "My portfolio showcases my ability to deliver quality work on time and with attention to detail. I am confident in my ability to adapt quickly to new situations and technologies. If you have any questions or would like to learn more about my qualifications, please don't hesitate to contact me.",
+    "about.p1": "As a Full-Stack Engineer specializing in Angular, React, Node, and Java (Spring Boot), I design and develop comprehensive solutions, from front-end to back-end, ensuring robustness, scalability, and quality. With a strong work ethic and a passion for learning, I am committed to bringing my best to every project and working collaboratively within a team to achieve success.",
     "about.p3": "I look forward to the opportunity to contribute my skills and expertise to your team.",
     "about.skills": "Skills & Technologies",
 
@@ -84,8 +83,7 @@ const translations: Translations = {
 
     // About
     "about.title": "À propos de moi",
-    "about.p1": "Je suis un étudiant de 23 ans, très motivé, prêt à relever de nouveaux défis en accord avec mes ambitions professionnelles. Avec un fort sens du travail et une passion pour l'apprentissage, je m'engage à donner le meilleur de moi-même sur chaque projet et à collaborer efficacement en équipe pour atteindre les objectifs.",
-    "about.p2": "Mon portfolio illustre ma capacité à fournir un travail de qualité dans les délais, avec une attention particulière aux détails. Je m'adapte rapidement aux nouvelles situations et technologies. Si vous avez des questions ou souhaitez en savoir plus sur mon profil, n'hésitez pas à me contacter.",
+    "about.p1": "En tant que Ingenieur Full-Stack spécialisé en Angular, React, Node et Java (Spring Boot), je conçois et développe des solutions complètes, du front-end au back-end, en garantissant robustesse, évolutivité et qualité. Avec un fort sens du travail et une passion pour l'apprentissage, je m'engage à donner le meilleur de moi-même sur chaque projet et à collaborer efficacement en équipe pour atteindre les objectifs.",
     "about.p3": "J'ai hâte de mettre mes compétences et mon expertise au service de votre équipe.",
     "about.skills": "Compétences & Technologies",
 

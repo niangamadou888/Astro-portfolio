@@ -29,6 +29,10 @@ export function TechStack() {
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg"
     },
     {
+      name: "Next",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg"
+    },
+    {
       name: "Java",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
     },
