@@ -50,7 +50,7 @@ export const Hero = () => {
   const { scrollY } = useScroll();
   const y = useTransform(scrollY, [0, 500], [0, -150]);
   const handleDownload = (language: 'en' | 'fr') => {
-    const pdfUrl = language === 'en' ? '/Amadou Boubacar Niang cv anglais.pdf' : '/CV de Amadou Boubacar Niang.pdf';
+    const pdfUrl = language === 'en' ? '/Amadou Boubacar Niang cv anglais.pdf' : '/Amadou-Boubacar-Niang - CV.pdf';
     window.open(pdfUrl, '_blank');
 
     toast({
