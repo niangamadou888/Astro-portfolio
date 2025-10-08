@@ -9,14 +9,14 @@ export const Education = () => {
     {
       degree:
         language === 'fr'
-          ? "Master en Génie Logiciel"
+          ? "Master en Ingénierie Logicielle"
           : "Master's degree in Software Engineering",
       school: "Université Numérique Cheikh Hamidou Kane",
       location: language === 'fr' ? "Dakar, Sénégal" : "Dakar, Senegal",
-      period: language === 'fr' ? "Avr 2024 - Actuel" : "Apr 2024 - Present",
+      period: language === 'fr' ? "En cours" : "Ongoing",
       description:
         language === 'fr'
-          ? "Études avancées en génie logiciel, axées sur les pratiques et méthodologies modernes de développement."
+          ? "Études avancées en ingénierie logicielle, axées sur les pratiques et méthodologies modernes de développement."
           : "Advanced studies in Software Engineering, focusing on modern software development practices and methodologies.",
       achievements: [
         language === 'fr'
@@ -33,11 +33,11 @@ export const Education = () => {
     {
       degree:
         language === 'fr'
-          ? "Licence en Développement Logiciel"
-          : "Bachelor's degree in Software Development",
+          ? "Licence en Informatique et Développement d'Applications (Web, Mobile, Gaming)"
+          : "Bachelor's degree in Computer Science and Application Development (Web, Mobile, Gaming)",
       school: "Université Numérique Cheikh Hamidou Kane",
       location: language === 'fr' ? "Dakar, Sénégal" : "Dakar, Senegal",
-      period: language === 'fr' ? "Oct 2019 - Oct 2023" : "Oct 2019 - Oct 2023",
+      period: "2023",
       description:
         language === 'fr'
           ? "Études approfondies du développement logiciel sur les plateformes web, mobile et jeux."
@@ -58,14 +58,14 @@ export const Education = () => {
       ]
     },
     {
-      degree: language === 'fr' ? "Baccalauréat" : "High School Diploma",
-      school: "Lycée Technique Andre Peytavin",
+      degree: language === 'fr' ? "Baccalauréat en Science et Technique de l'Économie et de la Gestion" : "High School Diploma in Science and Technique of Economics and Management",
+      school: "Lycée Technique André Peytavin",
       location: language === 'fr' ? "Saint-Louis, Sénégal" : "Saint-Louis, Senegal",
-      period: language === 'fr' ? "Oct 2016 - Juil 2019" : "Oct 2016 - Jul 2019",
+      period: "2019",
       description:
         language === 'fr'
-          ? "Sciences et Techniques de l'Économie et de la Gestion"
-          : "Science and Technique of Economics and Management",
+          ? "Formation complète en sciences et techniques de l'économie et de la gestion."
+          : "Comprehensive training in science and technique of economics and management.",
       achievements: [
         language === 'fr'
           ? "Solides bases en économie et gestion"

@@ -5,8 +5,14 @@ import { Button } from "./ui/button";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 export const Certifications = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const certifications = [
+    {
+      title: language === 'fr' ? "Ingenieur FullStack" : "FullStack Engineer",
+      issuer: "EDACY",
+      date: "2025",
+      skills: ["Full Stack Development", "Software Engineering", "Web Development", "Application Architecture"]
+    },
     {
       title: "Legacy Full Stack Developer",
       issuer: "freeCodeCamp",
@@ -15,14 +21,14 @@ export const Certifications = () => {
       skills: ["Responsive Web Design", "JavaScript Algorithms and Data Structures", "Data Visualization", "Front End", "Back End", "Information Security and Quality Assurance"]
     },
     {
-      title: "Software Development with Python",
-      issuer: "Force-N",
+      title: language === 'fr' ? "Développement Python" : "Python Development",
+      issuer: "FORCE-N",
       date: "2023",
-      link: "https://formation.force-n.sn/mod/customcert/verify_certificate.php?contextid=418479&code=FI0GkJ2BIi&qrcode=1",
+      link: "https://formation.force-n.sn/mod/customcert/verify_certificate.php?contextid=418479&code=FI0GkJ2BIi",
       skills: ["Python", "Angular", "Django", "SQL/NoSQL", "Git", "Docker"]
     },
     {
-      title: "Network Administrator",
+      title: language === 'fr' ? "Administrateur Réseau" : "Network Administrator",
       issuer: "IMSAS",
       date: "2023",
       skills: ["Network Security", "System Administration", "Protocols", "Troubleshooting", "Infrastructure", "Security"]

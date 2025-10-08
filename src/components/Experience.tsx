@@ -9,42 +9,42 @@ export const Experience = () => {
       title: language === 'fr' ? "Développeur Web Freelance" : "Web Developer Freelance",
       company: "Upwork",
       location: language === 'fr' ? "Freelance" : "Freelance",
-      period: language === 'fr' ? "Actuel" : "Present",
+      period: language === 'fr' ? "Mai 2024 - Août 2024" : "May 2024 - Aug 2024",
       description:
         language === 'fr'
-          ? "Conception et développement de sites web responsives et esthétiques."
-          : "Design and programming of responsive and nice websites.",
+          ? "Conception et programmation de sites web réactifs et esthétiques."
+          : "Design and programming of responsive and aesthetic websites.",
     },
     {
-      title: language === 'fr' ? "Développeur de Jeux Vidéo" : "Video Game Developer",
-      company: "Learning-Adventure",
+      title: language === 'fr' ? "Développeur Jeu Vidéo" : "Video Game Developer",
+      company: "Learning Adventure",
       location: language === 'fr' ? "France" : "France",
-      period: language === 'fr' ? "Juil 2024 - Sep 2024" : "Jul 2024 - Sep 2024",
+      period: language === 'fr' ? "Juil 2024 - Déc 2024" : "Jul 2024 - Dec 2024",
       description:
         language === 'fr'
-          ? "Conception et programmation d'un jeu sérieux générique interagissant avec une plateforme d'apprentissage et des solutions logicielles, conformément au cahier des charges."
-          : "Design and programming of a generic serious game that interacts with a learning platform and software solutions, in line with specifications.",
+          ? "Conception et programmation d'un serious game générique interagissant avec une plateforme d'apprentissage. Développement conforme au cahier des charges, avec communication serveur et modularité du scénario."
+          : "Design and programming of a generic serious game interacting with a learning platform. Development in accordance with specifications, with server communication and scenario modularity.",
     },
     {
       title: language === 'fr' ? "Administrateur Réseau" : "Network Administrator",
       company:
-        "Société d'Aménagement et d'Exploitation des Terres du Delta du Fleuve Sénégal (SAED)",
-      location: language === 'fr' ? "Saint-Louis" : "Saint-Louis",
+        language === 'fr' ? "SAED, Saint-Louis (Sénégal)" : "SAED, Saint-Louis (Senegal)",
+      location: language === 'fr' ? "Saint-Louis, Sénégal" : "Saint-Louis, Senegal",
       period: language === 'fr' ? "Mars 2023 - Juin 2023" : "Mar 2023 - Jun 2023",
       description:
         language === 'fr'
-          ? "Gestion des incidents et des problèmes sur les systèmes et réseaux informatiques, installation et configuration de nouveaux équipements informatiques, accompagnement des utilisateurs."
-          : "Management of incidents and problems on IT systems and networks, installation and configuration of new IT equipment, help users get started.",
+          ? "Gestion des incidents réseaux et systèmes. Installation et configuration des équipements informatiques. Assistance et formation des utilisateurs."
+          : "Network and system incident management. Installation and configuration of IT equipment. User assistance and training.",
     },
     {
-      title: language === 'fr' ? "Développeur de Jeux Vidéo" : "Video Game Developer",
+      title: language === 'fr' ? "Développeur Jeu Vidéo" : "Video Game Developer",
       company: "Hatice Technologie",
       location: language === 'fr' ? "Dakar" : "Dakar",
       period: language === 'fr' ? "Mars 2022 - Juin 2022" : "Mar 2022 - Jun 2022",
       description:
         language === 'fr'
-          ? "Conception et programmation de jeux mobiles et de solutions logicielles en conformité avec le cahier des charges."
-          : "Design and programming of mobile games and software solutions in compliance with specifications.",
+          ? "Conception et développement de jeux mobiles et d'applications logicielles selon cahier des charges."
+          : "Design and development of mobile games and software applications according to specifications.",
     },
   ];
 

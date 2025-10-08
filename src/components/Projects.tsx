@@ -71,10 +71,21 @@ export const Projects = () => {
 
   const webProjects: Project[] = [
     {
+      title: "Logidoo - Module Chargement",
+      description: {
+        en: "Load optimization module for Logidoo that automatically calculates space and weight usage in trucks and containers, reducing costs and planning errors with 3D visualization and PDF export.",
+        fr: "Module d'optimisation de chargement pour Logidoo qui calcule automatiquement l'espace et le poids utilisés dans les camions et conteneurs, réduisant les coûts et erreurs de planification avec visualisation 3D et export PDF.",
+      },
+      image: "/logidoo-projet-aide-au-chargement.png",
+      tags: ["MongoDB", "Express", "Angular", "Node.js"],
+      liveUrl: "https://logidoo.netlify.app/",
+      githubUrl: "https://github.com/niangamadou888/logidoo-projet-aide-au-chargement"
+    },
+    {
       title: "Tutor Recruitment Platform",
       description: {
         en: "Creation of a tutor recruitment platform for our university (UNCHK) as part of a school project.",
-        fr: "Création d’une plateforme de recrutement de tuteur pour notre université (UNCHK) dans le cadre d’un projet scolaire.",
+        fr: "Création d'une plateforme de recrutement de tuteur pour notre université (UNCHK) dans le cadre d'un projet scolaire.",
       },
       image: "/Plateforme-Recrutement-Tuteur.png",
       tags: ["Angular", "Java","SpringBoot", "MySQL"],

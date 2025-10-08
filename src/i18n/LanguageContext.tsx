@@ -19,7 +19,7 @@ const translations: Translations = {
 
     // Hero
     "hero.greeting": "Hello, I'm Amadou Boubacar Niang",
-    "hero.role.software": "Software Engineer",
+    "hero.role.software": "Full Stack Developer",
     "hero.role.web": "Web",
     "hero.role.mobile": "Mobile",
     "hero.role.gaming": "Gaming",
@@ -32,7 +32,7 @@ const translations: Translations = {
 
     // About
     "about.title": "About Me",
-    "about.p1": "As a Full-Stack Engineer specializing in Angular, React, Node, and Java (Spring Boot), I design and develop comprehensive solutions, from front-end to back-end, ensuring robustness, scalability, and quality. With a strong work ethic and a passion for learning, I am committed to bringing my best to every project and working collaboratively within a team to achieve success.",
+    "about.p1": "As a Full-Stack Developer, I design high-performance and scalable web applications. Rigorous and solution-oriented, I create reliable tools that improve user experience and productivity. Open to learning new technologies, I quickly adapt to the evolving needs of projects.",
     "about.p3": "I look forward to the opportunity to contribute my skills and expertise to your team.",
     "about.skills": "Skills & Technologies",
 
@@ -70,7 +70,7 @@ const translations: Translations = {
 
     // Hero
     "hero.greeting": "Bonjour, je suis Amadou Boubacar Niang",
-    "hero.role.software": "Ingenieur logiciel",
+    "hero.role.software": "Développeur Full Stack",
     "hero.role.web": "Web",
     "hero.role.mobile": "Mobile",
     "hero.role.gaming": "Jeux vidéo",
@@ -83,7 +83,7 @@ const translations: Translations = {
 
     // About
     "about.title": "À propos de moi",
-    "about.p1": "En tant que Ingenieur Full-Stack spécialisé en Angular, React, Node et Java (Spring Boot), je conçois et développe des solutions complètes, du front-end au back-end, en garantissant robustesse, évolutivité et qualité. Avec un fort sens du travail et une passion pour l'apprentissage, je m'engage à donner le meilleur de moi-même sur chaque projet et à collaborer efficacement en équipe pour atteindre les objectifs.",
+    "about.p1": "Développeur Full-Stack, je conçois des applications web performantes et évolutives. Rigoureux et orienté solutions, je crée des outils fiables qui améliorent l'expérience utilisateur et la productivité. Ouvert à l'apprentissage de nouvelles technologies, je m'adapte rapidement aux besoins évolutifs des projets.",
     "about.p3": "J'ai hâte de mettre mes compétences et mon expertise au service de votre équipe.",
     "about.skills": "Compétences & Technologies",
 
