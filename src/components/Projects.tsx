@@ -110,7 +110,6 @@ export const Projects = () => {
       image: "/glowlikes.png",
       tags: ["React","Vite", "Tailwind CSS"],
       liveUrl: "https://glowlikes.it/",
-      githubUrl: "https://github.com/ytlab23/glowyviews"
     },
     {
       title: "Mini Social Network",
