@@ -124,14 +124,14 @@ export const Projects = () => {
       githubUrl: "https://github.com/niangamadou888/Mini-Social-Network"
     },
     {
-      title: "School Management",
+      title: "Podcast Transcription Platform",
       description: {
-        en: "A secure web application for managing student enrollment and information in educational institutions.",
-        fr: "Une application web sécurisée pour gérer l’inscription et les informations des étudiants dans les établissements scolaires.",
+        en: "A full-stack web application built with Next.js, Node.js/Express, and MongoDB that enables users to search podcasts and automatically transcribe audio files using AssemblyAI's speech-to-text API. Features include JWT authentication, rate limiting, and SSH-based remote processing for compute-intensive transcription tasks.",
+        fr: "Une application web full-stack construite avec Next.js, Node.js/Express et MongoDB qui permet aux utilisateurs de rechercher des podcasts et de transcrire automatiquement des fichiers audio en utilisant l'API de synthèse vocale d'AssemblyAI. Les fonctionnalités incluent l'authentification JWT, la limitation de débit et le traitement à distance basé sur SSH pour les tâches de transcription intensives en calcul.",
       },
-      image: "/SchoolManagement.png",
-      tags: ["Angular", "Java", "SpringBoot", "MySQL"],
-      githubUrl: "https://github.com/niangamadou888/school-management"
+      image: "/PodcastTranscript.png",
+      tags: ["React", "Node.js", "Express", "MongoDB"],
+      liveUrl: "https://podcasttranscript.ai/",
     },
     
   ];
