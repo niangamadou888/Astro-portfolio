@@ -30,6 +30,7 @@ import {
   SiShadcnui,
 } from "react-icons/si";
 import { IoLogoJavascript } from "react-icons/io5";
+import { RiNextjsFill } from "react-icons/ri";
 interface Project {
   title: string;
   description: { en: string; fr: string };
@@ -60,6 +61,7 @@ const getTechIcon = (tech: string) => {
     "Django": <SiDjango {...iconProps} className={cn(iconProps.className, "text-[#092E20]")} />,
     "JavaScript": <IoLogoJavascript {...iconProps} className={cn(iconProps.className, "text-[#F7DF1E]")} />,
     "shadcn/ui": <SiShadcnui {...iconProps} className={cn(iconProps.className, "text-[#F7DF1E]")} />,
+    "Next.js": <RiNextjsFill {...iconProps} className={cn(iconProps.className)} />,
   };
   
   return techMap[tech] || null;
@@ -129,7 +131,7 @@ export const Projects = () => {
         fr: "Une application web full-stack construite avec Next.js, Node.js/Express et MongoDB qui permet aux utilisateurs de rechercher des podcasts et de transcrire automatiquement des fichiers audio en utilisant l'API de synthèse vocale d'AssemblyAI. Les fonctionnalités incluent l'authentification JWT, la limitation de débit et le traitement à distance basé sur SSH pour les tâches de transcription intensives en calcul.",
       },
       image: "/PodcastTranscript.png",
-      tags: ["React", "Node.js", "Express", "MongoDB"],
+      tags: ["Next.js", "Node.js", "Express", "MongoDB","Whisper AI"],
       liveUrl: "https://podcasttranscript.ai/",
     },
     
