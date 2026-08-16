@@ -32,3 +32,9 @@ yarn-error.log*
 *.njsproj
 *.sln
 *.sw?
+
+# Local Netlify folder
+.netlify
+
+# Netlify CLI edge-function bootstrap artifact
+deno.lock

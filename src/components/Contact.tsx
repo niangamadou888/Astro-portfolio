@@ -1,37 +1,49 @@
 import { motion } from "framer-motion";
-import { MailIcon, UserIcon, MessageSquareIcon, SendIcon, CheckCircleIcon } from "lucide-react";
+import { MailIcon, UserIcon, MessageSquareIcon, SendIcon, CheckCircleIcon, AlertCircleIcon } from "lucide-react";
 import { useForm } from "react-hook-form";
-import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useState } from "react";
 import { useLanguage } from "@/i18n/LanguageContext";
+import { contactSchema, type ContactFormData } from "@/lib/contact-schema";
 
-const schema = z.object({
-  name: z.string().min(2, "Name must be at least 2 characters"),
-  email: z.string().email("Please enter a valid email address"),
-  subject: z.string().min(3, "Subject must be at least 3 characters"),
-  message: z.string().min(20, "Message must be at least 20 characters"),
-});
-
-type FormData = z.infer<typeof schema>;
+const CONTACT_ENDPOINT = "/api/contact";
+const FALLBACK_ERROR = "Something went wrong. Please email me directly at amadouniang2001@gmail.com.";
 
 export const Contact = () => {
   const { t } = useLanguage();
   const [submitted, setSubmitted] = useState(false);
+  const [sendError, setSendError] = useState<string | null>(null);
 
   const {
     register,
     handleSubmit,
     reset,
     formState: { errors, isSubmitting },
-  } = useForm<FormData>({ resolver: zodResolver(schema) });
+  } = useForm<ContactFormData>({ resolver: zodResolver(contactSchema) });
 
-  const onSubmit = async (data: FormData) => {
-    await new Promise(r => setTimeout(r, 900));
-    console.log("Form data:", data);
-    setSubmitted(true);
-    reset();
-    setTimeout(() => setSubmitted(false), 5000);
+  const onSubmit = async (data: ContactFormData) => {
+    setSendError(null);
+
+    try {
+      const response = await fetch(CONTACT_ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      if (!response.ok) {
+        const body = await response.json().catch(() => null);
+        setSendError(body?.error ?? FALLBACK_ERROR);
+        return;
+      }
+
+      setSubmitted(true);
+      reset();
+      setTimeout(() => setSubmitted(false), 5000);
+    } catch {
+      // Network failure, offline, or the request was blocked before it landed.
+      setSendError(FALLBACK_ERROR);
+    }
   };
 
   const inputStyle = {
@@ -102,6 +114,16 @@ export const Contact = () => {
               </motion.div>
             ) : (
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+                {/* Honeypot — hidden from humans, irresistible to bots */}
+                <input
+                  {...register("website")}
+                  type="text"
+                  tabIndex={-1}
+                  autoComplete="off"
+                  aria-hidden="true"
+                  style={{ position: 'absolute', left: '-9999px', width: 1, height: 1, opacity: 0 }}
+                />
+
                 {/* Name + Email row */}
                 <div className="grid sm:grid-cols-2 gap-5">
                   <div className="space-y-1.5">
@@ -235,6 +257,24 @@ export const Contact = () => {
                     </>
                   )}
                 </button>
+
+                {/* Send failure */}
+                {sendError && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -6 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    role="alert"
+                    className="flex items-start gap-3 rounded-xl px-4 py-3 text-sm"
+                    style={{
+                      background: 'rgba(248, 113, 113, 0.08)',
+                      border: '1px solid rgba(248, 113, 113, 0.25)',
+                      color: 'rgba(252, 165, 165, 0.95)',
+                    }}
+                  >
+                    <AlertCircleIcon className="w-4 h-4 mt-0.5 shrink-0" />
+                    <span>{sendError}</span>
+                  </motion.div>
+                )}
 
                 {/* Alternative contact */}
                 <p className="text-center text-sm" style={{ color: 'rgba(255,255,255,0.3)' }}>
