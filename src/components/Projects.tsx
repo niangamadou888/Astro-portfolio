@@ -75,14 +75,14 @@ export const Projects = () => {
       githubUrl: "https://github.com/niangamadou888/Application-de-Gestion-du-Recrutement-des-Tuteurs-Back-End",
     },
     {
-      title: "City Life",
+      title: "SmsApp",
       description: {
-        en: "A platform providing users with information about local services and activities in their city area.",
-        fr: "Une plateforme fournissant aux utilisateurs des informations sur les services et activités locales dans leur ville.",
+        en: "A multilingual virtual number platform for online SMS verification, offering temporary numbers across 190+ countries and 300+ services with a wallet system supporting card and crypto payments.",
+        fr: "Une plateforme multilingue de numéros virtuels pour la vérification SMS en ligne, proposant des numéros temporaires dans plus de 190 pays et 300+ services, avec un portefeuille acceptant carte et crypto.",
       },
-      image: "/CityLife.png",
-      tags: ["Angular", "Django", "PostgreSQL"],
-      githubUrl: "https://github.com/niangamadou888/City-Life",
+      image: "/smsapp.png",
+      tags: ["React", "TypeScript", "Tailwind CSS", "Express", "MySQL"],
+      liveUrl: "https://smsapp.io",
     },
     {
       title: "TopAccounts",
