@@ -1,0 +1,11 @@
+{
+  // Cloudflare Workers Builds runs `npx wrangler deploy` after the Vite build.
+  // Without this file wrangler tries to auto-configure the project, which
+  // requires Vite >= 6 and fails on our Vite 5 setup. An explicit assets-only
+  // Worker just uploads the built `dist` folder.
+  "name": "my-portfolio",
+  "compatibility_date": "2026-09-01",
+  "assets": {
+    "directory": "./dist"
+  }
+}

@@ -38,3 +38,6 @@ yarn-error.log*
 
 # Netlify CLI edge-function bootstrap artifact
 deno.lock
+
+# Wrangler local state (Cloudflare Workers)
+.wrangler/
