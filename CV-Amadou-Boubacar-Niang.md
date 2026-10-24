@@ -16,7 +16,7 @@ Développeur Full-Stack (Angular / React / Next.js / Node.js / Spring Boot) avec
 
 ## EXPÉRIENCE PROFESSIONNELLE
 
-### Fondateur & Développeur — esimapp.io (produit personnel)
+### Fondateur & Développeur — esimapp.io
 *Septembre 2026 – Présent · Remote*
 
 - Boutique d'eSIM de voyage pour **200+ destinations**, prix affiché au Go : conception, développement et mise en production en solo, **du premier commit au lancement en 4 semaines** (React, TypeScript, Express, Tailwind CSS).
@@ -57,7 +57,7 @@ Développeur Full-Stack (Angular / React / Next.js / Node.js / Spring Boot) avec
 
 ## PROJETS SÉLECTIONNÉS
 
-### esimapp.io — Boutique d'eSIM de Voyage (mon propre produit)
+### esimapp.io — Boutique d'eSIM de Voyage
 **React · TypeScript · Express · Vite · Tailwind CSS · Playwright**
 Live : https://esimapp.io
 eSIM prépayées pour 200+ destinations, prix au Go, le moins cher en premier. Paiement, livraison de l'eSIM (QR code, code d'activation) et remboursements entièrement automatisés ; comptes optionnels, portefeuille carte/crypto, back-office ; 4 500+ tests automatisés.

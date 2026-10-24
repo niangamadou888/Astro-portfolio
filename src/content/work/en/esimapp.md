@@ -1,5 +1,5 @@
 ---
-title: "esimapp — travel eSIM store (my own product)"
+title: "esimapp — travel eSIM store"
 summary: "My own product: a travel eSIM store for 200+ destinations, priced per GB, where payment, delivery and refunds run with no human in the loop."
 role: "Founder and sole developer"
 period: "Sep 2026 – present"

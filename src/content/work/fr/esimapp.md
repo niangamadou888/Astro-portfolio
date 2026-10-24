@@ -1,5 +1,5 @@
 ---
-title: "esimapp — boutique d'eSIM de voyage (mon propre produit)"
+title: "esimapp — boutique d'eSIM de voyage"
 summary: "Mon propre produit : une boutique d'eSIM de voyage pour 200+ destinations, prix au Go, où paiement, livraison et remboursements tournent sans intervention."
 role: "Fondateur et seul développeur"
 period: "Sept. 2026 – aujourd'hui"

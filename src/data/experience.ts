@@ -11,7 +11,7 @@ export interface ExperienceItem {
 export const EXPERIENCE: readonly ExperienceItem[] = [
   {
     title: { en: "Founder & Developer", fr: "Fondateur et développeur" },
-    company: { en: "esimapp.io (my own product)", fr: "esimapp.io (mon propre produit)" },
+    company: { en: "esimapp.io", fr: "esimapp.io" },
     location: { en: "Remote", fr: "À distance" },
     period: { en: "Sep 2026 – present", fr: "Sept. 2026 – aujourd'hui" },
     description: {
