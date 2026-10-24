@@ -5,8 +5,7 @@ role: "Lead developer (took over in 2025)"
 period: "Sep 2025 – present"
 named: true
 liveUrl: "https://podcasttranscript.ai"
-featured: 3
-order: 3
+order: 4
 stack: ["Next.js", "Node.js", "Express", "MongoDB", "whisper.cpp", "Meilisearch", "DeepSeek"]
 facts:
   - value: "52,700+"

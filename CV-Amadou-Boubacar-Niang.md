@@ -10,11 +10,19 @@ Portfolio : (lien à insérer)
 
 ## PROFIL
 
-Développeur Full-Stack (Angular / React / Next.js / Node.js / Spring Boot) avec plus de 2 ans d'expérience sur des projets livrés en production, dont **PRNow.io**, plateforme SaaS propulsée par IA connectant les entreprises à **400+ éditeurs dans 190 pays**, et **Logidoo**, module d'optimisation logistique 3D déployé en production. Actuellement en Master d'Ingénierie Logicielle à l'UNCHK, certifié FullStack Engineer EDACY (2025). J'interviens de la conception de l'architecture jusqu'au déploiement, avec une exigence forte sur la qualité du code et l'expérience utilisateur.
+Développeur Full-Stack (Angular / React / Next.js / Node.js / Spring Boot) avec plus de 2 ans d'expérience sur des projets livrés en production, dont **esimapp.io**, ma propre boutique d'eSIM de voyage (200+ destinations, conçue, développée et exploitée seul), **PRNow.io**, plateforme SaaS propulsée par IA connectant les entreprises à **400+ éditeurs dans 190 pays**, et **Logidoo**, module d'optimisation logistique 3D déployé en production. Actuellement en Master d'Ingénierie Logicielle à l'UNCHK, certifié FullStack Engineer EDACY (2025). J'interviens de la conception de l'architecture jusqu'au déploiement, avec une exigence forte sur la qualité du code et l'expérience utilisateur.
 
 ---
 
 ## EXPÉRIENCE PROFESSIONNELLE
+
+### Fondateur & Développeur — esimapp.io (produit personnel)
+*Septembre 2026 – Présent · Remote*
+
+- Boutique d'eSIM de voyage pour **200+ destinations**, prix affiché au Go : conception, développement et mise en production en solo, **du premier commit au lancement en 4 semaines** (React, TypeScript, Express, Tailwind CSS).
+- Paiement (carte, Apple Pay, Google Pay) confirmé côté serveur, livraison automatique de l'eSIM et remboursements automatiques, sans intervention manuelle ; webhooks idempotents.
+- Comptes optionnels (e-mail, Google, Telegram), portefeuille rechargeable par carte ou crypto, back-office avec rôles admin/support ; **4 500+ tests automatisés**, déploiement scripté avec retour arrière.
+- Live : https://esimapp.io
 
 ### Développeur Web Full-Stack — Freelance (Upwork)
 *Mai 2024 – Présent · Remote*
@@ -48,6 +56,11 @@ Développeur Full-Stack (Angular / React / Next.js / Node.js / Spring Boot) avec
 ---
 
 ## PROJETS SÉLECTIONNÉS
+
+### esimapp.io — Boutique d'eSIM de Voyage (mon propre produit)
+**React · TypeScript · Express · Vite · Tailwind CSS · Playwright**
+Live : https://esimapp.io
+eSIM prépayées pour 200+ destinations, prix au Go, le moins cher en premier. Paiement, livraison de l'eSIM (QR code, code d'activation) et remboursements entièrement automatisés ; comptes optionnels, portefeuille carte/crypto, back-office ; 4 500+ tests automatisés.
 
 ### Logidoo — Module d'Optimisation de Chargement
 **MongoDB · Express · Angular · Node.js (MEAN)**

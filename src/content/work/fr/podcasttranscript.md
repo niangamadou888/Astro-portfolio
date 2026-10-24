@@ -5,8 +5,7 @@ role: "Développeur principal (projet repris en 2025)"
 period: "Sept. 2025 – aujourd'hui"
 named: true
 liveUrl: "https://podcasttranscript.ai"
-featured: 3
-order: 3
+order: 4
 stack: ["Next.js", "Node.js", "Express", "MongoDB", "whisper.cpp", "Meilisearch", "DeepSeek"]
 facts:
   - value: "52\u00A0700+"

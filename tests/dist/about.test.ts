@@ -13,11 +13,9 @@ describe("about page", () => {
     expect(page.querySelectorAll("h1").map((h1) => h1.text.trim())).toEqual([heading]);
   });
 
-  it("leads the experience timeline with the current contract role", () => {
-    expect(readPage("/about/").querySelector("#experience h3")?.text.trim()).toBe("Lead Full-Stack Developer (contract)");
-    expect(readPage("/fr/about/").querySelector("#experience h3")?.text.trim()).toBe(
-      "Développeur full-stack principal (contrat)",
-    );
+  it("leads the experience timeline with the founder role", () => {
+    expect(readPage("/about/").querySelector("#experience h3")?.text.trim()).toBe("Founder & Developer");
+    expect(readPage("/fr/about/").querySelector("#experience h3")?.text.trim()).toBe("Fondateur et développeur");
   });
 
   it("links both CVs to files that exist", () => {

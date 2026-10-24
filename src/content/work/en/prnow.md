@@ -5,8 +5,8 @@ role: "Lead developer (for a client)"
 period: "Aug 2025 – present"
 named: true
 liveUrl: "https://prnow.io"
-featured: 1
-order: 1
+featured: 2
+order: 2
 stack: ["Next.js 15", "React 19", "TypeScript", "MariaDB", "Tailwind CSS", "DeepSeek & Gemini", "Cloudflare"]
 facts:
   - value: "11"

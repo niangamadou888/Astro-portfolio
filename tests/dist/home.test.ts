@@ -21,7 +21,7 @@ describe("home page", () => {
       readPage("/fr/")
         .querySelectorAll("#featured-work h3 a")
         .map((a) => a.getAttribute("href")),
-    ).toEqual(["/fr/work/prnow/", "/fr/work/smsapp/", "/fr/work/podcasttranscript/"]);
+    ).toEqual(["/fr/work/esimapp/", "/fr/work/prnow/", "/fr/work/smsapp/"]);
   });
 
   it("lists the four services in the #services section the menu points to", () => {

@@ -5,8 +5,8 @@ role: "Développeur principal (pour un client)"
 period: "Févr. 2026 – aujourd'hui"
 named: true
 liveUrl: "https://smsapp.io"
-featured: 2
-order: 2
+featured: 3
+order: 3
 stack: ["React", "TypeScript", "Express", "MySQL", "Tailwind CSS", "Flutter", "DeepSeek"]
 facts:
   - value: "24"

@@ -4,7 +4,7 @@ import { describe, expect, it } from "vitest";
 import { CONTENT_ROOT, listMarkdown, readFrontmatter } from "@/test-utils/content-files";
 import { findForbidden } from "./forbidden";
 
-const NAMED_HOSTS = ["prnow.io", "smsapp.io", "podcasttranscript.ai", "topaccounts.io"];
+const NAMED_HOSTS = ["esimapp.io", "prnow.io", "smsapp.io", "podcasttranscript.ai", "topaccounts.io"];
 
 interface Fact {
   value: string;
@@ -15,9 +15,10 @@ interface Fact {
 describe("content guard", () => {
   const files = listMarkdown(CONTENT_ROOT);
 
-  it("has the five English case studies", () => {
+  it("has the six English case studies", () => {
     const english = listMarkdown(join(CONTENT_ROOT, "work/en")).map((file) => file.split("/").pop());
     expect(english.sort()).toEqual([
+      "esimapp.md",
       "multi-server-hosting.md",
       "podcasttranscript.md",
       "prnow.md",

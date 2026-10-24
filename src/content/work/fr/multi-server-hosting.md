@@ -4,7 +4,7 @@ summary: "Réunir 13 serveurs et leurs applications sous un panneau Dokploy auto
 role: "Responsable infrastructure (pour un client)"
 period: "Sept. – oct. 2026"
 named: false
-order: 4
+order: 5
 stack: ["Dokploy", "Docker Swarm", "Traefik", "nginx", "Caddy", "Bash", "bats"]
 facts:
   - value: "13"

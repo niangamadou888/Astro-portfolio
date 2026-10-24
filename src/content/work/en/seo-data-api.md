@@ -4,7 +4,7 @@ summary: "Designed and built one API in front of 10 SEO data providers, with cac
 role: "Lead developer (for a client)"
 period: "Aug – Oct 2026"
 named: false
-order: 5
+order: 6
 stack: ["TypeScript", "Node.js", "Fastify", "MariaDB", "zod", "Dokploy"]
 facts:
   - value: "10"

@@ -10,6 +10,16 @@ export interface ExperienceItem {
 
 export const EXPERIENCE: readonly ExperienceItem[] = [
   {
+    title: { en: "Founder & Developer", fr: "Fondateur et développeur" },
+    company: { en: "esimapp.io (my own product)", fr: "esimapp.io (mon propre produit)" },
+    location: { en: "Remote", fr: "À distance" },
+    period: { en: "Sep 2026 – present", fr: "Sept. 2026 – aujourd'hui" },
+    description: {
+      en: "Designed, built and run a travel eSIM store for 200+ destinations, with fully automated payment, delivery and refunds — live four weeks after the first commit.",
+      fr: "Conception, développement et exploitation d'une boutique d'eSIM de voyage pour 200+ destinations, avec paiement, livraison et remboursements entièrement automatisés — en ligne quatre semaines après le premier commit.",
+    },
+  },
+  {
     title: { en: "Lead Full-Stack Developer (contract)", fr: "Développeur full-stack principal (contrat)" },
     company: { en: "Client portfolio of web products", fr: "Portefeuille de produits web d'un client" },
     location: { en: "Remote", fr: "À distance" },

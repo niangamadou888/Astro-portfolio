@@ -4,7 +4,7 @@ summary: "Conception d'une API unique devant 10 fournisseurs de données SEO, av
 role: "Développeur principal (pour un client)"
 period: "Août – oct. 2026"
 named: false
-order: 5
+order: 6
 stack: ["TypeScript", "Node.js", "Fastify", "MariaDB", "zod", "Dokploy"]
 facts:
   - value: "10"
